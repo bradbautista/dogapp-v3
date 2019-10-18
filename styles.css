@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+form * {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    display: block;
+    margin-bottom: 10px;
+}
+  
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.hidden {
+    display: none;
+}
