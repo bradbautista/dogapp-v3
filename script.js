@@ -13,13 +13,15 @@ function displayResults(responseJson) {
     // Clear the error message area in case an error has previously
     // been generated
     $('.msg-area').text('');
-
+    
     // Check the response status for errors; if there's an error,
     // provide the user with the error message and a picture of a sad dog.
     if (responseJson.status === 'error') {
-        $('.msg-area').text(`Dog.CEO has encountered an error: ${responseJson.message}.`);
-        $('.results-img').replaceWith(`<img src="https://i.ytimg.com/vi/NMrHd17OeUk/hqdefault.jpg" class="results-img">`)
+        $('h2').text('Wait a doggone minute!');
+        $('.msg-area').text(`Internet dog-photo archive has encountered an error: ${responseJson.message}.`);
+        $('.results-img').replaceWith(`<img src="" class="results-img">`)
     } else {
+        $('h2').text('Look at this dog!')
         $('.results-img').replaceWith(
         `<img src="${responseJson.message}" class="results-img">`
     )
