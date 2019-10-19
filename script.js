@@ -15,7 +15,7 @@ function displayResults(responseJson) {
     $('.msg-area').text('');
     
     // Check the response status for errors; if there's an error,
-    // provide the user with the error message and a picture of a sad dog.
+    // provide the user with the error message.
     if (responseJson.status === 'error') {
         $('h2').text('Wait a doggone minute!');
         $('.msg-area').text(`Internet dog-photo archive has encountered an error: ${responseJson.message}.`);
